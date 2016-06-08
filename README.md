@@ -1,2 +1,9 @@
 # dotfiles
-自分の.files
+my .files
+
+# cp
+```
+cp ~/.bash_profile ./
+cp ~/.bashrc ./
+cp ~/.vimrc ./
+```
