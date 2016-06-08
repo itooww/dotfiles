@@ -196,3 +196,11 @@ alias la='ls -A'                              # all but . and ..
 # }
 # 
 # alias cd=cd_func
+
+alias ssh="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;ssh"
+alias scp="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;scp"
+alias git="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;git"
+alias knife="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;knife"
+
+alias ssh-copy-id="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;ssh-copy-id"
+alias hostls="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;cat ~/.ssh/config | grep Host | grep -v HostName"
