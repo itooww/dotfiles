@@ -3,9 +3,9 @@ my .files
 
 # cp
 ```
-cp ~/.bash_profile ./
-cp ~/.bashrc ./
-cp ~/.vimrc ./
+cp ./.bash_profile ~/
+cp ./.bashrc ~/
+cp ./.vimrc ~/
 ```
 
 # ssh config
