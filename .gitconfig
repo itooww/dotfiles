@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = ibuki_ito
+	email = ibuki_ito@yaz.co.jp
+[color]
+	diff = auto
+	status = auto
+	branch = auto

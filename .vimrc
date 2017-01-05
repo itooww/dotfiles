@@ -9,7 +9,7 @@ set showmatch      " 対応する括弧を強調表示
 set helpheight=999 " ヘルプを画面いっぱいに開く
 set list           " 不可視文字を表示
 " 不可視文字の表示記号指定
-set listchars=tab:>>,eol:¶,extends:>,precedes:<
+set listchars=tab:¦_,eol:¶,extends:>,precedes:<
 
 set ruler " 画面右下のカーソル位置表示
 
