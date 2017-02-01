@@ -22,11 +22,11 @@ set autoread   "外部でファイルに変更がされた場合は読みなお�
 set nobackup   " ファイル保存時にバックアップファイルを作らない
 set noswapfile " ファイル編集中にスワップファイルを作らない
 
-set expandtab     " タブ入力を複数の空白入力に置き換える
-set tabstop=2     " 画面上でタブ文字が占める幅
-set shiftwidth=2  " 自動インデントでずれる幅
-set softtabstop=2 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
+set tabstop=4     " 画面上でタブ文字が占める幅
 set autoindent    " 改行時に前の行のインデントを継続する
+set expandtab     " タブ入力を複数の空白入力に置き換える
+set shiftwidth=4  " 自動インデントでずれる幅
+set softtabstop=4 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
 set smartindent   " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 
 " コマンドラインモードで<Tab>キーによるファイル名補完を有効にする

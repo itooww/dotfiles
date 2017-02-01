@@ -1,8 +1,24 @@
 # This is Git's per-user configuration file.
 [user]
-	name = ibuki_ito
-	email = itouibuki11@gmail.com
+    name = ibuki_ito
+    email = itouibuki11@gmail.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+    ui = always
+    diff = always
+    diff-higlight = always
+    status = always
+    branch = always
+[push]
+    default = nothing # push 時にブランチ指定強制
+[core]
+    editor = gvim
+    autocrlf = input
+    quotepath = false # 日本語ファイル名エスケープ対策
+[alias]
+    st = status --short --branch
+    co = checkout
+    br = branch
+    graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %cn %Cred%d %Creset%s'
+    difff = diff --word-diff
+    current-branch = rev-parse --abbrev-ref HEAD
+
