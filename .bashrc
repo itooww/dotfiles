@@ -30,6 +30,11 @@ alias git="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;git"
 alias ssh-copy-id="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;ssh-copy-id"
 alias hostls="cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;cat ~/.ssh/config | grep Host | grep -v HostName"
 
+# open at cygwin
+if [ `echo "$(uname)" | grep "CYGWIN"` ]; then
+    alias open="cygstart"
+fi
+
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
