@@ -38,6 +38,9 @@ fi
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# php 7
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+# at Mac
+if [ "$(uname)" == 'Darwin' ]; then
+    # php 7
+    export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+fi
 
