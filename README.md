@@ -1,5 +1,10 @@
 # dotfiles
-my .files
+my dotfiles
+
+# USAGE
+```
+sh ./bootstrap.sh
+```
 
 # cp
 ```
