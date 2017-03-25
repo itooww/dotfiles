@@ -1,8 +1,8 @@
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
-if has('vim_starting')
-  set nocompatible               " Be iMproved
+if has('vim_starting') " 非 GUI 起動時に 0 を返す
+  set nocompatible               " vi 互換有効化だが、無くても自動でしてくれる
 endif
 
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
