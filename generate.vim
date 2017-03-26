@@ -1,21 +1,29 @@
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
-if has('vim_starting') " 非 GUI 起動時に 0 を返す
-  set nocompatible               " vi 互換有効化だが、無くても自動でしてくれる
+
+" 非 GUI 起動時に 0 を返す
+if has('vim_starting')
+  " vi 互換有効化だが、無くても自動でしてくれる
+  set nocompatible
+
 endif
 
+" ファイル読み込み
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
 let g:vim_bootstrap_langs = "html,javascript,lisp,php,python,ruby"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
+" ファイルが読み込めなかった場合
 if !filereadable(vimplug_exists)
   echo "Installing Vim-Plug..."
   echo ""
+  " curl してファイル作成
   silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   let g:not_finish_vimplug = "yes"
 
+  " プラグインインストール実行
   autocmd VimEnter * PlugInstall
 endif
 
