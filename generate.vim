@@ -12,6 +12,7 @@ endif
 " ファイル読み込み
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
+" 変数定義
 let g:vim_bootstrap_langs = "html,javascript,lisp,php,python,ruby"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
@@ -33,6 +34,7 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+" NERD Tree
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
