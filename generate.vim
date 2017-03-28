@@ -29,6 +29,7 @@ if !filereadable(vimplug_exists)
 endif
 
 " Required:
+" 関数呼び出し
 call plug#begin(expand('~/.vim/plugged'))
 
 "*****************************************************************************
@@ -37,20 +38,48 @@ call plug#begin(expand('~/.vim/plugged'))
 " NERD Tree
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+
+" コメントアウト制御
 Plug 'tpope/vim-commentary'
+
+" Git 操作
 Plug 'tpope/vim-fugitive'
+
+" 多機能セレクタ
 Plug 'ctrlpvim/ctrlp.vim'
+
+" ステータスバー
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Git 差分表示
 Plug 'airblade/vim-gitgutter'
+
+" Grep
 Plug 'vim-scripts/grep.vim'
+
+" カラースキーム
 Plug 'vim-scripts/CSApprox'
+
+" 空白表示
 Plug 'bronson/vim-trailing-whitespace'
+
+" クオートなどの記号の開始終了自動入力
 Plug 'Raimondi/delimitMate'
+
+" 関数の中での場所を表示
 Plug 'majutsushi/tagbar'
+
+" シンタックスチェック
 Plug 'scrooloose/syntastic'
+
+" インデント可視化
 Plug 'Yggdroot/indentLine'
+
+" プログラミング言語や vim  の種類を設定して必要となるプラグインを自動インストールする
 Plug 'avelino/vim-bootstrap-updater'
+
+" プログラミング言語のシンタックスハイライト拡張
 Plug 'sheerun/vim-polyglot'
 
 let g:make = 'gmake'
