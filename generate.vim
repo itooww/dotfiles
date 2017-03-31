@@ -82,10 +82,15 @@ Plug 'avelino/vim-bootstrap-updater'
 " プログラミング言語のシンタックスハイライト拡張
 Plug 'sheerun/vim-polyglot'
 
+" 変数定義
 let g:make = 'gmake'
+
+" 変数が定義してあるかチェック
 if exists('make')
-        let g:make = 'make'
+    let g:make = 'make'
 endif
+
+" vim の中からインタラクティブにコマンド実行ができるようになるプラグイン
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
 "" Vim-Session
