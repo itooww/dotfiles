@@ -94,19 +94,24 @@ endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
 "" Vim-Session
+" ウィンドウ、タブ状態の保存・復元
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
+" vim のバージョンで条件分岐
 if v:version >= 703
+  " vim から shell を起動するプラグイン
   Plug 'Shougo/vimshell.vim'
 endif
 
 if v:version >= 704
   "" Snippets
   Plug 'SirVer/ultisnips'
+  " ctrlp 高速化プラグイン
   Plug 'FelikZ/ctrlp-py-matcher'
 endif
 
+" スニペット集
 Plug 'honza/vim-snippets'
 
 "" Color
