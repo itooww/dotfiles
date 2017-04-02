@@ -178,8 +178,10 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
+" utf-8 に BOM をつける
 set bomb
 set binary
+" 3 行以上のスクロールを再描画
 set ttyfast
 
 "" Fix backspace indent
@@ -195,11 +197,15 @@ set expandtab
 let mapleader=','
 
 "" Enable hidden buffers
+" 保存されていないファイルがあるときでも別のファイルを開ける
 set hidden
 
 "" Searching
+" 検索結果のハイライト
 set hlsearch
+" インクリメンタルサーチ
 set incsearch
+" 大文字小文字を区別しない
 set ignorecase
 set smartcase
 
