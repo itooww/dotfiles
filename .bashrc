@@ -1,7 +1,4 @@
 # Alias
-alias ls="ls -G"
-alias ll="ls -lG"
-alias la="ls -aG"
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -42,5 +39,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 if [ "$(uname)" == 'Darwin' ]; then
     # php 7
     export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+
+    alias ls="ls -G"
+    alias ll="ls -lG"
+    alias la="ls -aG"
 fi
 
