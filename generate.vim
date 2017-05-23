@@ -156,6 +156,11 @@ Plug 'tpope/vim-projectionist'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
 
+" previm
+Plug 'kannokanno/previm'
+
+" vimwiki
+Plug 'vimwiki/vimwiki'
 
 "*****************************************************************************
 "*****************************************************************************
@@ -254,12 +259,11 @@ else
   let g:CSApprox_loaded = 1
 
   " IndentLine
-  let g:indentLine_enabled = 1
+  let g:indentLine_enabled = 0
   let g:indentLine_concealcursor = 0
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
@@ -267,7 +271,6 @@ else
       set term=xterm-256color
     endif
   endif
-  
 endif
 
 
@@ -310,6 +313,17 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
+" previm
+" open_cmd
+" cygwin: cygstart
+" mac: open
+let g:previm_open_cmd = 'open'
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+
+
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
@@ -333,6 +347,7 @@ let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
+let g:NERDTreeShowHidden=1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
@@ -621,6 +636,11 @@ vnoremap <leader>rem  :RExtractMethod<cr>
 
 "*****************************************************************************
 "*****************************************************************************
+" tab settings
+set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
 
 "" Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
@@ -667,3 +687,13 @@ else
   let g:airline_symbols.linenr = ''
 endif
 
+" create dir at file save timing
+augroup vimrc-auto-mkdir  " {{{
+  autocmd!
+  autocmd BufWritePre * call s:auto_mkdir(expand('<afile>:p:h'))
+  function! s:auto_mkdir(dir)  " {{{
+    if !isdirectory(a:dir)
+      call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
+    endif
+  endfunction  " }}}
+augroup END  " }}}
