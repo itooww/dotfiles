@@ -5,9 +5,9 @@
 echo 'start distributing dotfiles ...'
 echo ''
 
-ln -s .vimrc ~/.vimrc
+ln -s .bash_profile ~/.bash_profile
 ln -s .bashrc ~/.bashrc
-ln -s .tmux.conf ~/.tmux.conf
+ln -s .zshrc ~/.zshrc
 
 echo ''
 echo 'All installed!'
